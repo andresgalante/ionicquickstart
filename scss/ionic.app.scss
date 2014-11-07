@@ -63,6 +63,8 @@ color: $light;
 .floating-btn{
   background: $balanced;
   color: #fff;
+  text-decoration: none;
+  font-size: 24px;
   display: block;
   line-height: 56px;
   height: 56px;
@@ -72,6 +74,7 @@ color: $light;
   text-align: center;
   width: 56px;
   @include border-radius(28px);
+  box-shadow: 0 2px 4px rgba(0,0,0,.4);
   z-index: 9999999999999999999;
 }
 
