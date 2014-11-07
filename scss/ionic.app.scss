@@ -1,0 +1,138 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #4a87ee !default;
+$calm:                            #43cee6 !default;
+$balanced:                        #66cc33 !default;
+$energized:                       #f0b840 !default;
+$assertive:                       #ef4e3a !default;
+$royal:                           #8a6de9 !default;
+$dark:                            #444 !default;
+
+$content-padding:                 10px !default;
+*/
+
+//Variables
+$positive:                        #00bcd4;
+$balanced:                          #8BC34A;
+$base-color:                      rgba(0,0,0,.87);
+$light-dark:                      rgba(0,0,0,.54);
+$lighter-dark:                     rgba(0,0,0,.12);
+$light:                           #fff;
+
+
+$content-padding:                 16px !default;
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+
+// Login ===========================================
+.login{
+background: $positive;
+color: $light;
+  h2{
+    color: $light;
+    padding: 80px 0 0 0 ;
+  }
+  p{
+    margin: 0 0 40px 0 ;
+  }
+}
+.button-fullsize{
+  display: block;
+  width: 100%;
+}
+
+.scroll{
+}
+
+// Floating action button ===========================================
+
+.floating-btn{
+  background: $balanced;
+  color: #fff;
+  display: block;
+  line-height: 56px;
+  height: 56px;
+  bottom: 100px;
+  right: 16px;
+  position:absolute;
+  text-align: center;
+  width: 56px;
+  @include border-radius(28px);
+  z-index: 9999999999999999999;
+}
+
+
+// list stile ===========================================
+
+.item small{
+  display: block;
+  color: $light-dark;
+}
+
+
+// User Profile ===========================================
+
+.user-header{
+  background: #444 url(../../../img/profile-heade-bg.jpg) no-repeat center center;
+  background-size: cover;
+  height: 200px;
+  h3{
+    padding: 140px 0 0 72px;
+    line-height: 60px;
+    color: $light;
+//    background: red;
+  }
+}
+
+.user-profile{
+  ul{
+    margin-top: 20px;
+  }
+  li{
+//    background: ;
+    position: relative;
+    padding: 10px 0 10px 0;
+    margin-left: 72px;
+    border-bottom: 1px solid $lighter-dark;
+    
+    &:last-child{border: none;}//last child
+    
+    small{
+      display: block;
+      color: $light-dark;
+    }//small
+    
+    i{
+      position: absolute;
+      top:10px;
+      left: -56px;
+      font-size: 18px;
+      color: $light-dark;
+    }//icon
+    
+  }//li
+  
+}//user profile
+
+
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../fonts" !default;
+
+// Include all of Ionic
+@import "../www/lib/ionic/scss/ionic";
+
